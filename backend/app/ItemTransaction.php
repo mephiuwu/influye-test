@@ -18,7 +18,7 @@ class ItemTransaction extends Model
         return $this->belongsTo(Item::class,'id_item');
     }
 
-    public function scopeDesc($query){
+    public static function scopeDesc($query){
         $query->orderByDesc('created_at');
     }
 }
